@@ -1,0 +1,358 @@
+* {
+  background-color: #353b57;
+  --rosado: #d73186;
+  --celeste: #36eee0;
+  --amarillo: #ffe052;
+  --morado: #6466af;
+  --rosado-claro: #ff83b7;
+  --color-texto: #ebebeb;
+}
+
+/* Define estilo para h1
+tamaño de texto, alineacion, interlineado, y fuente */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  line-height: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Dfine estilo para h2
+tipo de fuente */
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Define caracteristicas del header
+margen, paddin y box sizing por defecto 
+color de letra y tamaño de la ventana al 50%*/
+header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-texto);
+  height: 40vh;
+}
+
+/* Define estilo de los enlaces a
+fuente, tamaño de letra, y decoracion de texto (le quita el subrayado del link) */
+a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Define el estilo del cuadro de presentacion
+flex, en columna, centrado, altura 100% y espaciado entre elementos de 15px */
+.presentacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ccc; */
+  gap: 15px;
+  margin: 0 10%;
+  border-bottom: 1px solid var(--color-texto);
+}
+
+/* Define el estilo de los elementos div dentro del cuadro presentacion
+altura y ancho fijos, margen de 10px, espaciado igual entre ellos, alineados al centro y stretch */
+.presentacion > div {
+  /* background-color: var(--rosado); */
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+  justify-content: space-between;
+  align-content: center;
+  align-items: stretch;
+}
+
+/* Define estilo de los h2 dentro del div
+tamaño de texto y alineacion */
+div > h2 {
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Define el estilo del img dentro del div
+flex, margen dentro del recuadro, y altura maxima */
+div > img {
+  display: flex;
+  margin: 0 10%;
+  max-height: 100%;
+}
+
+/* Se establece el estilo del recuadro menu
+flex, espaciado entre ellos, centrado */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: #36eee0; */
+  margin: 0 10%;
+  border-bottom: 1px solid var(--color-texto);
+}
+
+/* Establece estilo para el recuadro que contiene los elementos del menu
+flex, sin estilo de lista (le quita el punteo), distancia gap, margen y padding */
+.menu-seleccion {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 10px;
+  padding: 0;
+}
+
+/* Define estilo para los enlaces dentro del menu seleccion 
+tiempo de transicion cambio de color*/
+.menu-seleccion a {
+  transition: color 0.5s;
+}
+
+/* Define el estilo de cambio de color de los enlaces a dentro del menu-seleccion
+indica el color que tomara */
+.menu-seleccion a:hover {
+  color: var(--color-texto);
+}
+
+.menu-seleccion > .sobre-mi {
+  width: 80px;
+}
+
+/* Define estilo enlace */
+.sobre-mi a {
+  color: var(--rosado);
+}
+
+.experiencia a {
+  color: var(--celeste);
+}
+
+.educacion a {
+  color: var(--amarillo);
+}
+
+.proyectos a {
+  color: var(--morado);
+}
+
+.contacto a {
+  color: var(--rosado-claro);
+}
+
+/* ----------------------------------- */
+
+/* Define el estilo del main
+flex, margin, paddin y box sizing por defecto
+color de texto */
+main {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-texto);
+}
+
+/* Establece una altura del 100% de la ventana para las secciones dentro del main */
+main > section {
+  height: 600px;
+}
+
+/* Establece estilo para el recuadro del main class contenido 
+De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
+.contenido {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+section > h2 {
+  padding: 10px;
+  margin: 0 10%;
+  border-bottom: 1px solid var(--color-texto);
+}
+
+/* Define estilo para la seccion */
+.sobre-mi > h2 {
+  margin-left: 10%;
+  color: var(--rosado);
+  text-align: left;
+}
+
+.sobre-mi > a {
+  text-align: right;
+  margin-right: 10%;
+}
+
+.experiencia > h2 {
+  margin-bottom: 0px;
+  margin-right: 10%;
+  text-align: right;
+  color: var(--celeste);
+}
+
+.experiencia > a {
+  margin-left: 10%;
+}
+
+.educacion > h2 {
+  margin-bottom: 0px;
+  margin-left: 10%;
+  color: var(--amarillo);
+  text-align: left;
+}
+
+.educacion > a {
+  text-align: right;
+  margin-right: 10%;
+}
+
+.proyectos > h2 {
+  margin-bottom: 0px;
+  margin-right: 10%;
+  color: var(--morado);
+  text-align: right;
+  margin: 0 10%;
+  border-bottom: 1px solid var(--color-texto);
+}
+
+.proyectos > a {
+  margin-left: 10%;
+}
+
+.educacion-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.sobre-mi-texto,
+.sobre-mi-fotos {
+  /*   border: 3px solid black; */
+  height: 100%;
+  width: 400px;
+  align-content: center;
+}
+
+.c1 {
+  display: flex;
+  border: 1px solid var(--rosado);
+  width: 300px;
+  margin-left: 22%;
+}
+
+.c2 {
+  display: flex;
+  border: 1px solid var(--celeste);
+  width: 300px;
+  margin-left: 2%;
+}
+
+.c3 {
+  display: flex;
+  border: 1px solid var(--amarillo);
+  margin-left: 22%;
+  width: 300px;
+}
+
+.c4 {
+  display: flex;
+  border: 1px solid var(--morado);
+  width: 300px;
+  margin-left: 2%;
+}
+
+.educacion-info > .sobre-mi-fotos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sobre-mi-fotos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 10px;
+  padding: 0;
+}
+
+.sobre-mi-fotos > img {
+  max-width: 80px;
+  justify-content: center;
+}
+
+.contacto > h2 {
+  margin-top: 15%;
+  color: var(--rosado-claro);
+  text-align: center;
+}
+
+.rrss {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rrss-seleccion {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 10px;
+  padding: 0;
+}
+
+.rrss-seleccion > li > img {
+  display: flex;
+  margin: 0 10% 10% 10%;
+  max-height: 50px;
+}
+
+/* .contenido > .contacto {
+  border: 3px solid black;
+} */
+
+.contacto > h3 {
+  color: var(--amarillo);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.correo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.correo-info {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: -15px;
+}
+
+.correo-info > p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 12px;
+}
+
+.correo-info > img {
+  display: flex;
+  max-height: 40px;
+}
+
+/* ------------------------------------ */
+
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  color: var(--color-texto);
+  border-top: 1px solid var(--color-texto);
+  margin: 0 10%;
+  padding: 10px;
+}
