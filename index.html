@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Valentina Mardones Aravena" />
+    <meta
+      name="description"
+      content="Portafolio de proyectos, Desarrollador Full Stack Java Junior"
+    />
+    <meta
+      name="keywords"
+      content="Portafolio, Valetina Mardones Aravena, Desarrollador Full Stack, Java, JavaScript, CSS, html, git, github"
+    />
     <title>Portafolio Valentina Mardones</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="images/ico" />
     <link rel="stylesheet" href="assets/stylesheet.css" />
   </head>
   <body>
@@ -14,7 +24,7 @@
       </section>
       <section class="presentacion">
         <div>
-          <img src="assets/images/Gato_trabajador.ico" alt="mi foto" />
+          <img src="assets/images/mi-foto.svg" alt="mi foto" />
         </div>
         <div>
           <h2>Valetina Mardones Aravena</h2>
@@ -23,8 +33,10 @@
         </div>
       </section>
       <nav class="menu">
-        <ul class="menu-seleccion">
-          <li class="sobre-mi"><a href="#section-sobre-mi">SOBRE MI</a></li>
+        <ul class="menu-seleccion center">
+          <li class="sobre-mi center">
+            <a href="#section-sobre-mi">SOBRE MI</a>
+          </li>
           <li class="experiencia">
             <a href="#section-experiencia">EXPERIENCIA</a>
           </li>
@@ -36,41 +48,40 @@
     </header>
     <!-- ------------------- MAIN ------------------------ -->
     <main class="contenido">
-      <section id="section-sobre-mi" class="contenido sobre-mi">
+      <section id="section-sobre-mi" class="sobre-mi">
         <h2 id="sobre-mi">SOBRE MI</h2>
         <a href="#section-inicio">subir</a>
-      </section>
-
-      <section id="section-experiencia" class="contenido experiencia">
-        <h2>EXPERIENCIA</h2>
-        <a href="#section-inicio">subir</a>
-      </section>
-
-      <section id="section-educacion" class="contenido educacion">
-        <h2>EDUCACION</h2>
-        <a href="#section-inicio">subir</a>
-        <section class="educacion-info">
+        <section class="sobre-mi-info">
           <article class="sobre-mi-texto">
-            <p class="c1">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus quia voluptatibus quo molestias neque laborum at
-              obcaecati ad eaque ipsum consequuntur
-            </p>
-            <p class="c2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Necessitatibus vel ab dolore nulla! Expedita placeat a molestias
-              quibusdam quidem consequatur
-            </p>
-            <p class="c3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              necessitatibus placeat eveniet doloremque voluptatibus sit
-              mollitia blanditiis,
-            </p>
-            <p class="c4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos porro
-              sapiente veniam,
-            </p>
+            <article class="right">
+              <p class="c1 right">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus quia voluptatibus quo molestias neque laborum at
+                obcaecati ad eaque ipsum consequuntur
+              </p>
+            </article>
+            <article class="left">
+              <p class="c2">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Necessitatibus vel ab dolore nulla! Expedita placeat a molestias
+                quibusdam quidem consequatur
+              </p>
+            </article>
+            <article class="right">
+              <p class="c3 right">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                necessitatibus placeat eveniet doloremque voluptatibus sit
+                mollitia blanditiis,
+              </p>
+            </article>
+            <article class="left">
+              <p class="c4 left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                porro sapiente veniam,
+              </p>
+            </article>
           </article>
+
           <article class="sobre-mi-fotos">
             <img src="assets/images/javaScript.png" alt="" />
             <img src="assets/images/CSS.png" alt="" />
@@ -80,9 +91,20 @@
         </section>
       </section>
 
+      <section id="section-experiencia" class="experiencia">
+        <h2>EXPERIENCIA</h2>
+        <a href="#section-inicio">subir</a>
+      </section>
+
+      <section id="section-educacion" class="educacion">
+        <h2>EDUCACION</h2>
+        <a href="#section-inicio">subir</a>
+      </section>
+
       <section id="section-proyectos" class="contenido proyectos">
         <h2>PROYECTOS</h2>
         <a href="#section-inicio">subir</a>
+
         <section class="proyectos-info"></section>
       </section>
 
@@ -91,7 +113,7 @@
         <nav class="rrss">
           <ul class="rrss-seleccion">
             <li id="linkedin">
-              <img src="assets/images/linkedin_icon.ico" alt="Linkedin icono" />
+              <img src="assets/images/linkedin.svg" alt="Linkedin icono" />
               <a
                 href="https://www.linkedin.com/in/valentina-mardones-93405ab1/"
                 target="_blank"
