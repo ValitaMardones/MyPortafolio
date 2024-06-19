@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 :root {
   background-color: #353b57;
   --rosado: #d73186;
@@ -7,6 +9,7 @@
   --rosado-claro: #ff83b7;
   --color-texto: #ebebeb;
   --font-family-base: sans-serif;
+  --start-2p: "Press Start 2P", cursive;
 }
 
 * {
@@ -18,34 +21,43 @@ tamaño de texto, alineacion, interlineado, y fuente */
 h1 {
   display: flex;
   justify-content: center;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 10px;
-  font-family: var(--font-family-base);
+  font-family: var(--start-2p);
 }
 
-/* Dfine estilo para h2
-tipo de fuente */
 h2 {
-  font-family: var(--font-family-base);
   font-size: 16px;
+  font-family: var(--start-2p);
 }
 
 /* Define caracteristicas del header
 margen, paddin y box sizing por defecto 
 color de letra y tamaño de la ventana al 50%*/
 header {
-  font-family: var(--font-family-base);
+  font-family: var(--start-2p);
   margin: 0;
   padding: 0;
   color: var(--color-texto);
+  min-height: 50vh;
   height: 100%;
 }
 
 /* Define estilo de los enlaces a
 fuente, tamaño de letra, y decoracion de texto (le quita el subrayado del link) */
 a {
-  font-size: 14px;
+  margin: auto;
+  font-size: 10px;
   text-decoration: none;
+}
+
+.saludo {
+  height: 100px;
+  border: 1px solid black;
+}
+
+.saludo > h1 {
+  align-items: center;
 }
 
 /* Define el estilo del cuadro de presentacion
@@ -57,7 +69,8 @@ flex, en columna, centrado, altura 100% y espaciado entre elementos de 15px */
   justify-content: center;
   align-items: center;
   /*   background-color: #ccc; */
-  margin: 0 10% 50px 10%;
+  margin: 50px 10% 50px 10%;
+  min-height: 300px;
 }
 
 /* Define el estilo de los elementos div dentro del cuadro presentacion
@@ -66,17 +79,19 @@ altura y ancho fijos, margen de 10px, espaciado igual entre ellos, alineados al 
   /*   background-color: var(--rosado); */
   display: flex;
   flex-direction: column;
-  margin: 10px 10px;
+  margin: 0 10px;
   align-content: center;
   align-items: start;
 }
 
 /* Define estilo de los h2 dentro del div
 tamaño de texto y alineacion */
-div > h2 {
-  font-size: 14px;
+.nombre > h2 {
+  font-family: var(--start-2p);
+  font-size: 10px;
   text-align: left;
-  line-height: 0;
+  line-height: 2px;
+  font-weight: 100;
 }
 
 /* Define el estilo del img dentro del div
@@ -102,6 +117,7 @@ flex, espaciado entre ellos, centrado */
 flex, sin estilo de lista (le quita el punteo), distancia gap, margen y padding */
 .menu-seleccion {
   display: flex;
+  position: sticky;
   flex-wrap: wrap;
   list-style: none;
   margin: 10px;
@@ -162,11 +178,13 @@ main {
   padding: 0;
   box-sizing: border-box;
   color: var(--color-texto);
+  font-family: var(--start-2p);
 }
 
 main > section {
+  min-height: 100vh;
   height: 100%;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
 }
 
 /* Establece una altura del 100% de la ventana para las secciones dentro del main */
@@ -174,14 +192,10 @@ main > section {
 /* Establece estilo para el recuadro del main class contenido 
 De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
 .contenido,
-#section-sobre-mi,
-#section-experiencia,
-#section-educacion,
-#section-proyectos,
-#section-contacto {
+.contenido-section {
   display: flex;
-  width: 100%;
-  min-height: 500px;
+  width: auto;
+  min-width: 400px;
   flex-direction: column;
   margin: 20px 0;
 }
@@ -196,6 +210,7 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
 }
 
 #section-sobre-mi > a {
+  font-family: var(--start-2p);
   text-align: right;
   margin-right: 10%;
   margin-top: 8px;
@@ -210,6 +225,7 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
 }
 
 #section-experiencia > a {
+  font-family: var(--start-2p);
   text-align: left;
   margin-left: 10%;
   margin-top: 8px;
@@ -224,6 +240,7 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
 }
 
 #section-educacion > a {
+  font-family: var(--start-2p);
   text-align: right;
   margin-right: 10%;
   margin-top: 8px;
@@ -238,6 +255,7 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
 }
 
 #section-proyectos > a {
+  font-family: var(--start-2p);
   text-align: left;
   margin-left: 10%;
   margin-top: 8px;
@@ -246,18 +264,20 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
 .sobre-mi-info {
   /*   border: 3px solid black; */
   margin: 0 10% 0 10%;
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  min-height: 400px;
+  height: auto;
 }
 
 .sobre-mi-texto,
 .sobre-mi-fotos {
   display: flex;
   /*   border: 1px solid orange; */
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
   align-content: center;
 }
 
@@ -281,12 +301,20 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
   padding: 0;
   display: flex;
   flex-direction: column;
+  min-height: 400px;
+  height: auto;
 }
 
 .sobre-mi-texto > article > p {
   display: flex;
+  align-items: center;
+  font-size: 9px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  min-width: auto;
   width: 80%;
-  height: 80px;
+  min-height: 80px;
+  height: auto;
 }
 
 .sobre-mi-texto > .right {
@@ -341,7 +369,7 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
   width: 80%;
   margin: 20px 10px;
   padding: 0;
-  font-family: var(--font-family-base);
+  font-family: var(--start-2p);
 }
 
 .rrss-seleccion > li {
@@ -374,11 +402,19 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
   border: 3px solid black;
 } */
 
-.contacto > h3 {
+#section-contacto {
+  display: flex;
+  justify-content: center;
+}
+
+#section-contacto > h3 {
   color: var(--amarillo);
-  font-family: var(--font-family-base);
+  font-family: var(--start-2p);
   text-align: center;
+  font-weight: 100;
+  font-size: 16px;
   margin-top: 70px;
+  letter-spacing: -1px;
 }
 
 .correo {
@@ -392,7 +428,6 @@ De esta forma permite que los titulos se situen en el lado derecho e izquierdo*/
   list-style: none;
   gap: 15px;
   padding: 0;
-  margin: -15px;
 }
 
 .correo-info > p {
